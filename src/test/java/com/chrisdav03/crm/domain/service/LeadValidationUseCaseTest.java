@@ -36,7 +36,7 @@ public class LeadValidationUseCaseTest {
 
         when(nationalRegistryService.validateLead(lead)).thenReturn(true);
         when(judicialRecordsService.checkJudicialRecords(lead)).thenReturn(true);
-        when(prospectScoringService.getScore(lead)).thenReturn(75); // Score above 60
+        when(prospectScoringService.getScore(lead)).thenReturn(75);
 
         Prospect prospect = validationUseCase.validateAndConvertLead(lead);
 
@@ -82,7 +82,7 @@ public class LeadValidationUseCaseTest {
 
         when(nationalRegistryService.validateLead(lead)).thenReturn(true);
         when(judicialRecordsService.checkJudicialRecords(lead)).thenReturn(true);
-        when(prospectScoringService.getScore(lead)).thenReturn(50); // Below 60
+        when(prospectScoringService.getScore(lead)).thenReturn(50);
 
         Prospect prospect = validationUseCase.validateAndConvertLead(lead);
 
